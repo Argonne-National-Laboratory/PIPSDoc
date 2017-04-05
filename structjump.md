@@ -11,6 +11,7 @@ Pkg.clone("https://github.com/StructJuMP/StructJuMP.jl.git")
 Pkg.clone("https://github.com/StructJuMP/StructJuMPSolverInterface.jl")
 ```
 5. In  ~/.julia/v0.4/StructJUMP/StructJuMP.jl manually disable precompilation, and import StructJuMPSolverInterface and MPI.
+
 ```diff
 --- a/src/StructJuMP.jl
 +++ b/src/StructJuMP.jl
