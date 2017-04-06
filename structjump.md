@@ -54,7 +54,7 @@ import ReverseDiffSparse
 +import StructJuMPSolverInterface
 +import MPI
 ```
-10. Export the location of the PIPS library to StructJuMP. It is advised to put these lines in your .bashrc.
+10. Export the location of the PIPS library to StructJuMP. It is advised to put these lines in your .bashrc. Verify that the libraries are actually located in the corresponding folder.
 ```bash
 export PIPS_NLP_SHARED_LIB=$YOUR_PIPS_FOLDER/build/PIPS-NLP/libpipsnlp.so
 export PIPS_NLP_PAR_SHARED_LIB=$YOUR_PIPS_FOLDER/build/PIPS-NLP/libparpipsnlp.so
