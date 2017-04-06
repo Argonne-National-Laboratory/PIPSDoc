@@ -13,23 +13,27 @@ mv ma57-3.9.0.tar.gz ThirdPartyLibs/MA57
 ```bash
 ./build_3rdparty.sh
 ```
-2. Build PIPS-NLP:
+4. Setup PIPS-NLP:
 ```bash
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=RELEASE -DBUILD_ALL=OFF -DBUILD_PIPS_NLP=ON -DBUILD_PIPS_DOC=ON -DDUMP=ON -B. -H..
 ```
-   This creates a version of PIPS that dumps 1st stage matrices, creates a doxygen makefile target to generate the documentation, and only build PIPS-NLP. Change the build options to your needs.
-3. Download and install Julia 0.4.7 (support for 0.5 is in the works).
-4. Clone StructJuMP:
+   This creates a build setup for PIPS that dumps 1st stage matrices, creates a doxygen makefile target to generate the documentation, and only builds PIPS-NLP. Change the build options to your needs.
+5. Build PIPS-NLP with 4 threads:
+```bash
+make -j4
+```
+6. Download and install Julia 0.4.7 (support for 0.5 is in the works).
+7. Clone StructJuMP:
 ```julia
 Pkg.clone("https://github.com/StructJuMP/StructJuMP.jl.git")
 ```
-5. Clone the StructJuMP solver interface:
+8. Clone the StructJuMP solver interface:
 ```julia
 Pkg.clone("https://github.com/StructJuMP/StructJuMPSolverInterface.jl")
 ```
-6. In  ~/.julia/v0.4/StructJUMP/StructJuMP.jl manually disable precompilation, and import StructJuMPSolverInterface and MPI.
+9. In  ~/.julia/v0.4/StructJUMP/StructJuMP.jl manually disable precompilation, and import StructJuMPSolverInterface and MPI.
 
 ```diff
 --- a/src/StructJuMP.jl
