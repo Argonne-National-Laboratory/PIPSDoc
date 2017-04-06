@@ -9,7 +9,6 @@ git clone https://github.com/michel2323/PIPS.git
 mv ma57-3.9.0.tar.gz ThirdPartyLibs/MA57
 ```
 3. Build third party libraries. Adapt script if needed.
-
 ```bash
 ./build_3rdparty.sh
 ```
